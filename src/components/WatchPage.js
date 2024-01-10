@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/navSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentContainer";
+import LiveChat from "./LiveChat";
 
 const WatchPage=()=>{
   const dispatch = useDispatch();
@@ -23,7 +24,10 @@ const WatchPage=()=>{
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+        <div className="w-full">
+          <LiveChat />
+        </div>
+      </div>
     <CommentsContainer />
   </div>
   )
